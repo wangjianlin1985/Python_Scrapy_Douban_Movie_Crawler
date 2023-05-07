@@ -1,0 +1,13 @@
+# Windows
+Desktop.ini
+
+# Python
+*.py[cod]
+*.so
+*.egg
+*.egg-info
+dist
+build
+
+# My configurations
+dont_forget.txt

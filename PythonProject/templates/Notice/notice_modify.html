@@ -1,0 +1,43 @@
+{% load staticfiles %}
+{% include 'check_logstate.html' %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/notice.css' %}" />
+<div id="notice_EditDiv">
+	<form id="noticeModifyForm" enctype="multipart/form-data"  method="post">
+        {% csrf_token %}
+		<div>
+			<span class="label">公告id:</span>
+			<span class="inputControl">
+				<input class="textbox" type="text" id="notice_noticeId_modify" name="notice.noticeId" value="{{ noticeId }}" style="width:200px" />
+			</span>
+		</div>
+
+		<div>
+			<span class="label">标题:</span>
+			<span class="inputControl">
+				<input class="textbox" type="text" id="notice_title_modify" name="notice.title" style="width:200px" />
+
+			</span>
+
+		</div>
+		<div>
+			<span class="label">公告内容:</span>
+			<span class="inputControl">
+				<textarea id="notice_content_modify" name="notice.content" type="text/plain"   style="width:750px;height:500px;"></textarea>
+
+			</span>
+
+		</div>
+		<div>
+			<span class="label">发布时间:</span>
+			<span class="inputControl">
+				<input class="textbox" type="text" id="notice_publishDate_modify" name="notice.publishDate" />
+
+			</span>
+
+		</div>
+		<div class="operation">
+			<a id="noticeModifyButton" class="easyui-linkbutton">更新</a> 
+		</div>
+	</form>
+</div>
+<script src="{% static 'js/Notice/notice_modify.js' %}"></script>
